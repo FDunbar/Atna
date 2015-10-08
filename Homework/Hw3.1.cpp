@@ -23,11 +23,6 @@ int main()
     cin>>input;
     switch(input)
     {
-         case '1':
-         cout<<"You entered addition."<<endl;
-         cout<<"The numbers "<<x<<" + "<<y<<" equals "<<x+y<<endl;
-         break;
-
          case '2':
          cout<<"You entered subtraction."<<endl;
          cout<<"The numbers "<<x<<" - "<<y<<" equals "<<x-y<<endl;
