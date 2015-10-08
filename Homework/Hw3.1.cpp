@@ -1,43 +1,52 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<CodeBlocks_project_file>
-	<FileVersion major="1" minor="6" />
-	<Project>
-		<Option title="Homework_3" />
-		<Option pch_mode="2" />
-		<Option compiler="gcc" />
-		<Build>
-			<Target title="Debug">
-				<Option output="bin/Debug/Homework_3" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-g" />
-				</Compiler>
-			</Target>
-			<Target title="Release">
-				<Option output="bin/Release/Homework_3" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Release/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-O2" />
-				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
-			</Target>
-		</Build>
-		<Compiler>
-			<Add option="-Wall" />
-			<Add option="-fexceptions" />
-		</Compiler>
-		<Unit filename="../Documents/CS/Homework_3/HW3.1.cpp" />
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-			<lib_finder disable_auto="1" />
-		</Extensions>
-	</Project>
-</CodeBlocks_project_file>
+
+
+//Franklyn Dunbar
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char input;
+    double x,y;
+    cout<<"Please enter two numbers:"<<endl;
+    cin>>x;
+    cin>>y;
+
+    A1: cout<<endl;
+    cout<<"Input one of the following characters:"<<endl;
+    cout<<"1 = ADDITION"<<endl;
+    cout<<"2 = SUBTRACTION"<<endl;
+    cout<<"3 = MULTIPLICATION"<<endl;
+    cout<<"4 = DIVISION"<<endl;
+
+    cin>>input;
+    switch(input)
+    {
+         case '1':
+         cout<<"You entered addition."<<endl;
+         cout<<"The numbers "<<x<<" + "<<y<<" equals "<<x+y<<endl;
+         break;
+
+         case '2':
+         cout<<"You entered subtraction."<<endl;
+         cout<<"The numbers "<<x<<" - "<<y<<" equals "<<x-y<<endl;
+         break;
+
+         case '3':
+         cout<<"You entered multiplication."<<endl;
+         cout<<"The numbers "<<x<<" * "<<y<<" equals "<<x*y<<endl;
+         break;
+
+         case '4':
+         cout<<"You entered division."<<endl;
+         cout<<"The numbers "<<x<<" / "<<y<<" equals "<<x/y<<endl;
+         break;
+
+         default:
+         cout<<"Its not 1-4 man"<<endl;
+         goto A1;
+    }
+
+    return 0;
+}
